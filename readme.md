@@ -1,5 +1,6 @@
-# Description
+# Connect 4
+## Description
 My second—and substantially more complicated—attempt at a game-playing AI, this time for connect 4 (also known as four-in-a-row). It is also based on the minimax algorithm. I experimented with lots of optimizations, including alpha-beta pruning, iterative deepeneing, and transposition tables. Javascript is of course not the best language for writing a program this complicated and performance-critical, however it was an interesting challenge. Note that my program does not play perfectly, though it is worth noting that the game of connect 4 has been solved by others.
-# How to play
+## How to play
 The players take turns placing pieces; the first to connect four pieces in a row (either horizontally, vertically, or diagonally) wins. Each turn a player must place a piece in one of the seven columns that is not yet filled up. Pieces drop to the lowest empty space within a column (in other words, they stack). A draw occurs if the board fills up before either player acheives four-in-a-row.
 Make your move by simply clicking on the column where you wish to add your piece.
