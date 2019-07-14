@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+      // Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68160707-6', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top-controls">
+        <div id="undo" class="button">
+          &larr; Undo
+        </div>
+
+        <div id="message-box">
+          <div id="message"></div>
+          <div id="progress">
+            <img src="prog.png" alt="working...">
+          </div>
+        </div>
+
+        <div id="new" class="button active">
+          <span>New Game</span>
+          <ul id="game-type-dropdown">
+            <li class="menu-item" id="PvC">Human vs Computer</li>
+            <li class="menu-item" id="CvP">Computer vs Human</li>
+            <li class="menu-item" id="PvP">Human vs Human</li>
+            <li class="menu-item" id="CvC">Computer vs Computer</li>
+          </ul>
+        </div>
+      </div>
+      <div id="board-wrap">
+        <div id="board">
+          <div id="col1" class="column"></div>
+          <div id="col2" class="column"></div>
+          <div id="col3" class="column"></div>
+          <div id="col4" class="column"></div>
+          <div id="col5" class="column"></div>
+          <div id="col6" class="column"></div>
+          <div id="col7" class="column"></div>
+        </div>
+      </div>
+      <div id="bottom-controls">
+        <form method="post" action="">
+          <input type="text" name="board-code" value="" id="board-code">
+        </form>
+
+        <div id="goto" class="button active">Go to position</div>
+      </div>
+
+    </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="ai.js"></script>
+    <script src="board.js"></script>
+  </body>
+</html>
